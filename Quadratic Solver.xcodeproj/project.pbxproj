@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		49DCE61C24B5B74B004074B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DCE61B24B5B74B004074B8 /* AppDelegate.swift */; };
+		49DCE61E24B5B74B004074B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DCE61D24B5B74B004074B8 /* SceneDelegate.swift */; };
+		49DCE62024B5B74B004074B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DCE61F24B5B74B004074B8 /* ViewController.swift */; };
+		49DCE62324B5B74B004074B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49DCE62124B5B74B004074B8 /* Main.storyboard */; };
+		49DCE62524B5B74D004074B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49DCE62424B5B74D004074B8 /* Assets.xcassets */; };
+		49DCE62824B5B74D004074B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49DCE62624B5B74D004074B8 /* LaunchScreen.storyboard */; };
+		49DCE63324B5B74D004074B8 /* Quadratic_SolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DCE63224B5B74D004074B8 /* Quadratic_SolverTests.swift */; };
+		49DCE63E24B5B74D004074B8 /* Quadratic_SolverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DCE63D24B5B74D004074B8 /* Quadratic_SolverUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		49DCE62F24B5B74D004074B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49DCE61024B5B74B004074B8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 49DCE61724B5B74B004074B8;
+			remoteInfo = "Quadratic Solver";
+		};
+		49DCE63A24B5B74D004074B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49DCE61024B5B74B004074B8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 49DCE61724B5B74B004074B8;
+			remoteInfo = "Quadratic Solver";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		49DCE61824B5B74B004074B8 /* Quadratic Solver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quadratic Solver.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		49DCE61B24B5B74B004074B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		49DCE61D24B5B74B004074B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		49DCE61F24B5B74B004074B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		49DCE62224B5B74B004074B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		49DCE62424B5B74D004074B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		49DCE62724B5B74D004074B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		49DCE62924B5B74D004074B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49DCE62E24B5B74D004074B8 /* Quadratic SolverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Quadratic SolverTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		49DCE63224B5B74D004074B8 /* Quadratic_SolverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quadratic_SolverTests.swift; sourceTree = "<group>"; };
+		49DCE63424B5B74D004074B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49DCE63924B5B74D004074B8 /* Quadratic SolverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Quadratic SolverUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		49DCE63D24B5B74D004074B8 /* Quadratic_SolverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quadratic_SolverUITests.swift; sourceTree = "<group>"; };
+		49DCE63F24B5B74D004074B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		49DCE61524B5B74B004074B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49DCE62B24B5B74D004074B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49DCE63624B5B74D004074B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		49DCE60F24B5B74B004074B8 = {
+			isa = PBXGroup;
+			children = (
+				49DCE61A24B5B74B004074B8 /* Quadratic Solver */,
+				49DCE63124B5B74D004074B8 /* Quadratic SolverTests */,
+				49DCE63C24B5B74D004074B8 /* Quadratic SolverUITests */,
+				49DCE61924B5B74B004074B8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		49DCE61924B5B74B004074B8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				49DCE61824B5B74B004074B8 /* Quadratic Solver.app */,
+				49DCE62E24B5B74D004074B8 /* Quadratic SolverTests.xctest */,
+				49DCE63924B5B74D004074B8 /* Quadratic SolverUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		49DCE61A24B5B74B004074B8 /* Quadratic Solver */ = {
+			isa = PBXGroup;
+			children = (
+				49DCE61B24B5B74B004074B8 /* AppDelegate.swift */,
+				49DCE61D24B5B74B004074B8 /* SceneDelegate.swift */,
+				49DCE61F24B5B74B004074B8 /* ViewController.swift */,
+				49DCE62124B5B74B004074B8 /* Main.storyboard */,
+				49DCE62424B5B74D004074B8 /* Assets.xcassets */,
+				49DCE62624B5B74D004074B8 /* LaunchScreen.storyboard */,
+				49DCE62924B5B74D004074B8 /* Info.plist */,
+			);
+			path = "Quadratic Solver";
+			sourceTree = "<group>";
+		};
+		49DCE63124B5B74D004074B8 /* Quadratic SolverTests */ = {
+			isa = PBXGroup;
+			children = (
+				49DCE63224B5B74D004074B8 /* Quadratic_SolverTests.swift */,
+				49DCE63424B5B74D004074B8 /* Info.plist */,
+			);
+			path = "Quadratic SolverTests";
+			sourceTree = "<group>";
+		};
+		49DCE63C24B5B74D004074B8 /* Quadratic SolverUITests */ = {
+			isa = PBXGroup;
+			children = (
+				49DCE63D24B5B74D004074B8 /* Quadratic_SolverUITests.swift */,
+				49DCE63F24B5B74D004074B8 /* Info.plist */,
+			);
+			path = "Quadratic SolverUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		49DCE61724B5B74B004074B8 /* Quadratic Solver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49DCE64224B5B74D004074B8 /* Build configuration list for PBXNativeTarget "Quadratic Solver" */;
+			buildPhases = (
+				49DCE61424B5B74B004074B8 /* Sources */,
+				49DCE61524B5B74B004074B8 /* Frameworks */,
+				49DCE61624B5B74B004074B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Quadratic Solver";
+			productName = "Quadratic Solver";
+			productReference = 49DCE61824B5B74B004074B8 /* Quadratic Solver.app */;
+			productType = "com.apple.product-type.application";
+		};
+		49DCE62D24B5B74D004074B8 /* Quadratic SolverTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49DCE64524B5B74D004074B8 /* Build configuration list for PBXNativeTarget "Quadratic SolverTests" */;
+			buildPhases = (
+				49DCE62A24B5B74D004074B8 /* Sources */,
+				49DCE62B24B5B74D004074B8 /* Frameworks */,
+				49DCE62C24B5B74D004074B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				49DCE63024B5B74D004074B8 /* PBXTargetDependency */,
+			);
+			name = "Quadratic SolverTests";
+			productName = "Quadratic SolverTests";
+			productReference = 49DCE62E24B5B74D004074B8 /* Quadratic SolverTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		49DCE63824B5B74D004074B8 /* Quadratic SolverUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49DCE64824B5B74D004074B8 /* Build configuration list for PBXNativeTarget "Quadratic SolverUITests" */;
+			buildPhases = (
+				49DCE63524B5B74D004074B8 /* Sources */,
+				49DCE63624B5B74D004074B8 /* Frameworks */,
+				49DCE63724B5B74D004074B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				49DCE63B24B5B74D004074B8 /* PBXTargetDependency */,
+			);
+			name = "Quadratic SolverUITests";
+			productName = "Quadratic SolverUITests";
+			productReference = 49DCE63924B5B74D004074B8 /* Quadratic SolverUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		49DCE61024B5B74B004074B8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = Andrew;
+				TargetAttributes = {
+					49DCE61724B5B74B004074B8 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					49DCE62D24B5B74D004074B8 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 49DCE61724B5B74B004074B8;
+					};
+					49DCE63824B5B74D004074B8 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 49DCE61724B5B74B004074B8;
+					};
+				};
+			};
+			buildConfigurationList = 49DCE61324B5B74B004074B8 /* Build configuration list for PBXProject "Quadratic Solver" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 49DCE60F24B5B74B004074B8;
+			productRefGroup = 49DCE61924B5B74B004074B8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				49DCE61724B5B74B004074B8 /* Quadratic Solver */,
+				49DCE62D24B5B74D004074B8 /* Quadratic SolverTests */,
+				49DCE63824B5B74D004074B8 /* Quadratic SolverUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		49DCE61624B5B74B004074B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49DCE62824B5B74D004074B8 /* LaunchScreen.storyboard in Resources */,
+				49DCE62524B5B74D004074B8 /* Assets.xcassets in Resources */,
+				49DCE62324B5B74B004074B8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49DCE62C24B5B74D004074B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49DCE63724B5B74D004074B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		49DCE61424B5B74B004074B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49DCE62024B5B74B004074B8 /* ViewController.swift in Sources */,
+				49DCE61C24B5B74B004074B8 /* AppDelegate.swift in Sources */,
+				49DCE61E24B5B74B004074B8 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49DCE62A24B5B74D004074B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49DCE63324B5B74D004074B8 /* Quadratic_SolverTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49DCE63524B5B74D004074B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49DCE63E24B5B74D004074B8 /* Quadratic_SolverUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		49DCE63024B5B74D004074B8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 49DCE61724B5B74B004074B8 /* Quadratic Solver */;
+			targetProxy = 49DCE62F24B5B74D004074B8 /* PBXContainerItemProxy */;
+		};
+		49DCE63B24B5B74D004074B8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 49DCE61724B5B74B004074B8 /* Quadratic Solver */;
+			targetProxy = 49DCE63A24B5B74D004074B8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		49DCE62124B5B74B004074B8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49DCE62224B5B74B004074B8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		49DCE62624B5B74D004074B8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49DCE62724B5B74D004074B8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		49DCE64024B5B74D004074B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		49DCE64124B5B74D004074B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		49DCE64324B5B74D004074B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Quadratic Solver/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Coderus.Quadratic-Solver";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		49DCE64424B5B74D004074B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Quadratic Solver/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Coderus.Quadratic-Solver";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		49DCE64624B5B74D004074B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Quadratic SolverTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Coderus.Quadratic-SolverTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Quadratic Solver.app/Quadratic Solver";
+			};
+			name = Debug;
+		};
+		49DCE64724B5B74D004074B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Quadratic SolverTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Coderus.Quadratic-SolverTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Quadratic Solver.app/Quadratic Solver";
+			};
+			name = Release;
+		};
+		49DCE64924B5B74D004074B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Quadratic SolverUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Coderus.Quadratic-SolverUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Quadratic Solver";
+			};
+			name = Debug;
+		};
+		49DCE64A24B5B74D004074B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Quadratic SolverUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Coderus.Quadratic-SolverUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Quadratic Solver";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		49DCE61324B5B74B004074B8 /* Build configuration list for PBXProject "Quadratic Solver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49DCE64024B5B74D004074B8 /* Debug */,
+				49DCE64124B5B74D004074B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49DCE64224B5B74D004074B8 /* Build configuration list for PBXNativeTarget "Quadratic Solver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49DCE64324B5B74D004074B8 /* Debug */,
+				49DCE64424B5B74D004074B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49DCE64524B5B74D004074B8 /* Build configuration list for PBXNativeTarget "Quadratic SolverTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49DCE64624B5B74D004074B8 /* Debug */,
+				49DCE64724B5B74D004074B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49DCE64824B5B74D004074B8 /* Build configuration list for PBXNativeTarget "Quadratic SolverUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49DCE64924B5B74D004074B8 /* Debug */,
+				49DCE64A24B5B74D004074B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 49DCE61024B5B74B004074B8 /* Project object */;
+}
