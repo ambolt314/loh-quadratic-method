@@ -10,26 +10,18 @@ import XCTest
 
 class Quadratic_SolverUITests: XCTestCase {
 
+    var app: XCUIApplication?
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
+        app = XCUIApplication()
         continueAfterFailure = false
 
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
-        app.launch()
-
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        app?.textFields[AccessibilityIDs.aTextField].typeText("")
+        app?.textFields[AccessibilityIDs.bTextField].typeText("")
+        app?.textFields[AccessibilityIDs.cTextField].typeText("")
     }
 
     func testLaunchPerformance() throws {
@@ -39,5 +31,25 @@ class Quadratic_SolverUITests: XCTestCase {
                 XCUIApplication().launch()
             }
         }
+    }
+    
+    func testOneRoot() {
+        fillInForm(1, 2, 1)
+        XCTAssertTrue(((app?.otherElements[AccessibilityIDs.root1Label].exists) != nil))
+        XCTAssertFalse(((app?.otherElements[AccessibilityIDs.root2Label].exists) != nil))
+    }
+    
+    func testTwoRoots() {
+        fillInForm(1, 6, 5)
+    }
+    
+    func testNoRoots() {
+        fillInForm(1, 0, 1)
+    }
+    
+    func fillInForm(_ A: Double, _ B: Double, _ C: Double) {
+        app?.textFields[AccessibilityIDs.aTextField].typeText("\(A)")
+        app?.textFields[AccessibilityIDs.bTextField].typeText("\(B)")
+        app?.textFields[AccessibilityIDs.cTextField].typeText("\(C)")
     }
 }

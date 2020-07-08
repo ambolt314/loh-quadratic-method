@@ -15,6 +15,7 @@
 		49DCE62824B5B74D004074B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49DCE62624B5B74D004074B8 /* LaunchScreen.storyboard */; };
 		49DCE63324B5B74D004074B8 /* Quadratic_SolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DCE63224B5B74D004074B8 /* Quadratic_SolverTests.swift */; };
 		49DCE63E24B5B74D004074B8 /* Quadratic_SolverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DCE63D24B5B74D004074B8 /* Quadratic_SolverUITests.swift */; };
+		49DCE64C24B5C9C9004074B8 /* AccessibilityIDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DCE64B24B5C9C9004074B8 /* AccessibilityIDs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		49DCE63924B5B74D004074B8 /* Quadratic SolverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Quadratic SolverUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49DCE63D24B5B74D004074B8 /* Quadratic_SolverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quadratic_SolverUITests.swift; sourceTree = "<group>"; };
 		49DCE63F24B5B74D004074B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49DCE64B24B5C9C9004074B8 /* AccessibilityIDs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityIDs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 			children = (
 				49DCE63D24B5B74D004074B8 /* Quadratic_SolverUITests.swift */,
 				49DCE63F24B5B74D004074B8 /* Info.plist */,
+				49DCE64B24B5C9C9004074B8 /* AccessibilityIDs.swift */,
 			);
 			path = "Quadratic SolverUITests";
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49DCE63E24B5B74D004074B8 /* Quadratic_SolverUITests.swift in Sources */,
+				49DCE64C24B5C9C9004074B8 /* AccessibilityIDs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
