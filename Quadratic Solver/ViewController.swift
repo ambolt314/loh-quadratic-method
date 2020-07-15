@@ -61,9 +61,9 @@ class ViewController: UIViewController {
         print("C = \(C)")
         
         if(A != 1) {
-            A = 1
             B = B/A
             C = C/A
+            A = 1
             print("#########################")
             print("A = \(A)")
             print("B = \(B)")
