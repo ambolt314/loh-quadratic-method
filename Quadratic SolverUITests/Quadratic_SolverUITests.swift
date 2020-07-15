@@ -60,23 +60,44 @@ class Quadratic_SolverUITests: XCTestCase {
         }
     }
     
-    func testOneRoot() {
+    //MARK: - single roots: solution represented in the form (x - P)²
+    func test121() {
         fillInForm(1, 2, 1)
         
         //check that a single root is shown
-        //XCTAssertTrue(root1.exists)
-        //XCTAssertFalse(root2.exists)
+        XCTAssertTrue(root1.exists)
+        XCTAssertFalse(root2.exists)
         
         //evaluate root
-        XCTAssertEqual(root1.value as! String, "-1.0")
+        
     }
     
-    func testTwoRoots() {
+    func test21218() {
+        fillInForm(2, 12, 18)
+    }
+    
+    //MARK: - double roots: solution represented in the form x(x - P) or (x - P)(x - Q)
+    func test165() {
         fillInForm(1, 6, 5)
+        
+        XCTAssertTrue(root1.exists)
+        XCTAssertTrue(root2.exists)
+        
+        //evaluate roots
     }
     
+    func test1812() {
+        fillInForm(1, 8, 12)
+    }
+    
+    //MARK: - any of P and Q are complex
     func testNoRoots() {
         fillInForm(1, 0, 1)
+        
+        XCTAssertTrue(root1.exists)
+        XCTAssertFalse(root2.exists)
+        
+        //evaluate root
         
     }
     

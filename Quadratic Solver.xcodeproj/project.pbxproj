@@ -36,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		49A9A3CA24BF5820007C0FC0 /* Dependencies */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Dependencies; path = "../../Library/Autosave Information/Dependencies"; sourceTree = "<group>"; };
 		49DCE61824B5B74B004074B8 /* Quadratic Solver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quadratic Solver.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49DCE61B24B5B74B004074B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49DCE61D24B5B74B004074B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +82,7 @@
 		49DCE60F24B5B74B004074B8 = {
 			isa = PBXGroup;
 			children = (
+				49A9A3CA24BF5820007C0FC0 /* Dependencies */,
 				49DCE61A24B5B74B004074B8 /* Quadratic Solver */,
 				49DCE63124B5B74D004074B8 /* Quadratic SolverTests */,
 				49DCE63C24B5B74D004074B8 /* Quadratic SolverUITests */,

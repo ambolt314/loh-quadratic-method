@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Numerics
 
 class ViewController: UIViewController {
     @IBOutlet weak var root1: UILabel!
@@ -70,11 +71,11 @@ class ViewController: UIViewController {
             print("C = \(C)")
         }
         
-        let average = -B / 2
+        let average = B == 0 ? 0 : -B / 2
         
         print("Average = \(average)")
         
-        var u: Double {
+        var u: Complex<Double> {
             return (pow(average, 2) - C).squareRoot()
         }
         
