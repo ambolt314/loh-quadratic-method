@@ -22,6 +22,15 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         root1.isHidden = true
         root2.isHidden = true
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard(_:)))
+        self.view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+        a.resignFirstResponder()
+        b.resignFirstResponder()
+        c.resignFirstResponder()
     }
 
     @IBAction func helpMe(_ sender: Any) {
@@ -48,12 +57,11 @@ class ViewController: UIViewController {
             A = 1
             B = B/A
             C = C/A
+            print("#########################")
+            print("A = \(A)")
+            print("B = \(B)")
+            print("C = \(C)")
         }
-        
-        print("#########################")
-        print("A = \(A)")
-        print("B = \(B)")
-        print("C = \(C)")
         
         let average = -B / 2
         

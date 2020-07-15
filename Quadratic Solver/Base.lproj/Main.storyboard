@@ -15,14 +15,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Loh's Method" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Scq-y8-JhR">
-                                <rect key="frame" x="103" y="138" width="208" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" identifier="LohsMethod"/>
-                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="34"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UpM-36-4Yo" userLabel="Input Stack View">
                                 <rect key="frame" x="157" y="397" width="100" height="102"/>
                                 <subviews>
@@ -30,40 +22,26 @@
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="34"/>
                                         <accessibility key="accessibilityConfiguration" identifier="aTextField"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="b" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qba-Pk-Pe4">
                                         <rect key="frame" x="0.0" y="34" width="100" height="34"/>
                                         <accessibility key="accessibilityConfiguration" identifier="bTextField"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="c" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yxt-x4-NrQ">
                                         <rect key="frame" x="0.0" y="68" width="100" height="34"/>
                                         <accessibility key="accessibilityConfiguration" identifier="cTextField"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="pR1-3M-nTB"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Root 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EnW-Hr-Tsl">
-                                <rect key="frame" x="183" y="271" width="48.5" height="19"/>
-                                <accessibility key="accessibilityConfiguration" identifier="root1"/>
-                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Root 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfu-tU-3n2">
-                                <rect key="frame" x="183" y="325" width="48.5" height="19"/>
-                                <accessibility key="accessibilityConfiguration" identifier="root2"/>
-                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XOE-kj-WXA">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XOE-kj-WXA" userLabel="Button Stack View">
                                 <rect key="frame" x="168.5" y="549" width="77" height="59.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3UU-PJ-cJX">
@@ -90,23 +68,55 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Solves the real roots of ax² + bx + c" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UjK-xq-Squ">
-                                <rect key="frame" x="80" y="199" width="260" height="19"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" identifier="solvesRealRootsOfABC"/>
-                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1wb-qf-HTd" userLabel="Output Stack View">
+                                <rect key="frame" x="183" y="309" width="48.5" height="38"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Root 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EnW-Hr-Tsl">
+                                        <rect key="frame" x="0.0" y="0.0" width="48.5" height="19"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="root1"/>
+                                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Root 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfu-tU-3n2">
+                                        <rect key="frame" x="0.0" y="19" width="48.5" height="19"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="root2"/>
+                                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nTi-V8-c7U" userLabel="Titles Stack View">
+                                <rect key="frame" x="77.5" y="177.5" width="259.5" height="56.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loh's Method" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Scq-y8-JhR">
+                                        <rect key="frame" x="0.0" y="0.0" width="259.5" height="37.5"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="LohsMethod"/>
+                                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="34"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Solves the real roots of ax² + bx + c" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UjK-xq-Squ">
+                                        <rect key="frame" x="0.0" y="37.5" width="259.5" height="19"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="solvesRealRootsOfABC"/>
+                                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="XOE-kj-WXA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8WX-kg-1Xh"/>
-                            <constraint firstItem="EnW-Hr-Tsl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I86-UY-rS1"/>
+                            <constraint firstItem="1wb-qf-HTd" firstAttribute="top" secondItem="nTi-V8-c7U" secondAttribute="bottom" constant="75" id="DtY-H2-9od"/>
                             <constraint firstItem="UpM-36-4Yo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="J6B-B0-axY"/>
+                            <constraint firstItem="1wb-qf-HTd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OAc-cO-sbe"/>
                             <constraint firstItem="XOE-kj-WXA" firstAttribute="top" secondItem="UpM-36-4Yo" secondAttribute="bottom" constant="50" id="VyC-Qn-0zi"/>
                             <constraint firstItem="UpM-36-4Yo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aHf-Pq-VVz"/>
-                            <constraint firstItem="mfu-tU-3n2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ukd-RE-l1Z"/>
+                            <constraint firstItem="UpM-36-4Yo" firstAttribute="top" secondItem="1wb-qf-HTd" secondAttribute="bottom" constant="50" id="fcn-r4-TN9"/>
+                            <constraint firstItem="nTi-V8-c7U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qO3-Wq-2qk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
