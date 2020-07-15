@@ -11,17 +11,44 @@ import XCTest
 class Quadratic_SolverUITests: XCTestCase {
 
     var app: XCUIApplication?
+    var mainTitle: XCUIElement!
+    var subtitle: XCUIElement!
+    var root1: XCUIElement!
+    var root2: XCUIElement!
+    var a: XCUIElement!
+    var b: XCUIElement!
+    var c: XCUIElement!
+    var submit: XCUIElement!
+    var about: XCUIElement!
+    
     override func setUpWithError() throws {
+        //try super.setUpWithError()
         app = XCUIApplication()
         continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
-    }
-
-    override func tearDownWithError() throws {
-        app?.textFields[AccessibilityIDs.aTextField].typeText("")
-        app?.textFields[AccessibilityIDs.bTextField].typeText("")
-        app?.textFields[AccessibilityIDs.cTextField].typeText("")
+        app?.launch()
+        
+        mainTitle = app?.staticTexts["LohsMethod"]
+        subtitle = app?.staticTexts["solvesRealRootsOfABC"]
+        root1 = app?.staticTexts["root1"]
+        root2 = app?.staticTexts["root2"]
+        a = app?/*@START_MENU_TOKEN@*/.textFields["aTextField"]/*[[".textFields[\"a\"]",".textFields[\"aTextField\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        b = app?/*@START_MENU_TOKEN@*/.textFields["bTextField"]/*[[".textFields[\"b\"]",".textFields[\"bTextField\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        c = app?/*@START_MENU_TOKEN@*/.textFields["cTextField"]/*[[".textFields[\"c\"]",".textFields[\"cTextField\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        submit = app?.buttons["Submit"]
+        about = app?.buttons["about"]
+        
+        
+        //do not check for roots at the start because they are hidden
+        let exists = NSPredicate(format: "exists == 1")
+        expectation(for: exists, evaluatedWith: mainTitle, handler: nil)
+        expectation(for: exists, evaluatedWith: subtitle, handler: nil)
+        expectation(for: exists, evaluatedWith: a, handler: nil)
+        expectation(for: exists, evaluatedWith: b, handler: nil)
+        expectation(for: exists, evaluatedWith: c, handler: nil)
+        expectation(for: exists, evaluatedWith: submit, handler: nil)
+        expectation(for: exists, evaluatedWith: about, handler: nil)
+        
+        waitForExpectations(timeout: 15, handler: nil)
     }
 
     func testLaunchPerformance() throws {
@@ -35,8 +62,13 @@ class Quadratic_SolverUITests: XCTestCase {
     
     func testOneRoot() {
         fillInForm(1, 2, 1)
-        XCTAssertTrue(((app?.otherElements[AccessibilityIDs.root1Label].exists) != nil))
-        XCTAssertFalse(((app?.otherElements[AccessibilityIDs.root2Label].exists) != nil))
+        
+        //check that a single root is shown
+        //XCTAssertTrue(root1.exists)
+        //XCTAssertFalse(root2.exists)
+        
+        //evaluate root
+        XCTAssertEqual(root1.value as! String, "-1.0")
     }
     
     func testTwoRoots() {
@@ -45,11 +77,36 @@ class Quadratic_SolverUITests: XCTestCase {
     
     func testNoRoots() {
         fillInForm(1, 0, 1)
+        
     }
     
     func fillInForm(_ A: Double, _ B: Double, _ C: Double) {
-        app?.textFields[AccessibilityIDs.aTextField].typeText("\(A)")
-        app?.textFields[AccessibilityIDs.bTextField].typeText("\(B)")
-        app?.textFields[AccessibilityIDs.cTextField].typeText("\(C)")
+        a.tap()
+        enterValue("\(A)")
+        
+        b.tap()
+        enterValue("\(B)")
+        
+        c.tap()
+        enterValue("\(C)")
+        
+        //find a coordinate on the screen and tap to clear keyboard
+        tap(x: 50, y: 50)
+        submit.tap()
+    }
+    
+    ///Types a given string into a keyboard. The field is defined above the method call
+    func enterValue(_ N: String){
+        let characters = Array(N)
+        
+        for character in characters {
+            app?.keys["\(character)"].tap()
+        }
+    }
+    
+    func tap(x: Double, y: Double) {
+        let normalized = app?.coordinate(withNormalizedOffset: CGVector(dx: 0, dy: 0))
+        let coordinate = normalized?.withOffset(CGVector(dx: x, dy: y))
+        coordinate?.tap()
     }
 }

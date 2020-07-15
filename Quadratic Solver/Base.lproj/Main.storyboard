@@ -46,13 +46,15 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3UU-PJ-cJX">
                                         <rect key="frame" x="0.0" y="0.0" width="77" height="39"/>
-                                        <accessibility key="accessibilityConfiguration" identifier="submit"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <bool key="isElement" value="NO"/>
+                                        </accessibility>
                                         <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="24"/>
                                         <state key="normal" title="Submit">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                         <connections>
-                                            <action selector="solve:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oj0-Xw-4Ze"/>
+                                            <action selector="solve:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1TM-qH-5wv"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Phf-Ij-RHK" userLabel="About">
@@ -125,7 +127,7 @@
                         <outlet property="b" destination="Qba-Pk-Pe4" id="Ab1-LY-J3X"/>
                         <outlet property="c" destination="Yxt-x4-NrQ" id="CUM-P6-aqB"/>
                         <outlet property="root1" destination="EnW-Hr-Tsl" id="SeU-1g-U4L"/>
-                        <outlet property="root2" destination="mfu-tU-3n2" id="9T0-4Q-ijn"/>
+                        <outlet property="root2" destination="mfu-tU-3n2" id="gfi-rL-o0c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

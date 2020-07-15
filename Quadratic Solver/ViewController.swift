@@ -9,15 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController {
-
     @IBOutlet weak var root1: UILabel!
     @IBOutlet weak var root2: UILabel!
-    
     @IBOutlet weak var a: UITextField!
     @IBOutlet weak var b: UITextField!
     @IBOutlet weak var c: UITextField!
-    
+
     override func viewDidLoad() {
+        print("View did load reached")
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         root1.isHidden = true
@@ -25,6 +24,14 @@ class ViewController: UIViewController {
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard(_:)))
         self.view.addGestureRecognizer(tapGesture)
+        
+        ///Accessibility identifiers
+        root1.accessibilityIdentifier = "root1"
+        root2.accessibilityIdentifier = "root2"
+        a.accessibilityIdentifier = "aTextField"
+        b.accessibilityIdentifier = "bTextField"
+        c.accessibilityIdentifier = "cTextField"
+        
     }
     
     @objc func dismissKeyboard(_ sender: UITapGestureRecognizer) {
