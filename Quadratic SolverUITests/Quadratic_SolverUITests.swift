@@ -61,57 +61,28 @@ class Quadratic_SolverUITests: XCTestCase {
     }
     
     //MARK: - single roots: solution represented in the form (x - P)²
-    func test121() {
-        fillInForm(1, 2, 1)
-        
-        //check that a single root is shown
-        XCTAssertTrue(root1.exists)
-        XCTAssertFalse(root2.exists)
-        
-        //evaluate root
-        let roots = evaluateRootLabels()
-        XCTAssertEqual(roots.count, 1)
-        XCTAssertEqual(roots[0], -1.0)
-    }
-    
-    func test21218() {
-        fillInForm(2, 12, 18)
-        
-        XCTAssertTrue(root1.exists)
-        XCTAssertFalse(root2.exists)
-        
-        //evaluate root
-        let roots = evaluateRootLabels()
-        XCTAssertEqual(roots.count, 1)
-        XCTAssertEqual(roots[0], -3.0)
-    }
+    func testOneRoot1() { expectOneRoot(1, -2, 1, root_Expected: 1) }
+    func testOneRoot2() { expectOneRoot(2, 12, 18, root_Expected: -3) }
+    func testOneRoot3() { expectOneRoot(1, -14, 49, root_Expected: 7) }
+    func testOneRoot4() { expectOneRoot(-1, 0, 0, root_Expected: 0) }
+    func testOneRoot5() { expectOneRoot(0.5, -2, 2, root_Expected: 2) }
+    func testOneRoot6() { expectOneRoot(2, 0, 0, root_Expected: 0) }
+    func testOneRoot7() { expectOneRoot(-0.5, 0, 0, root_Expected: 0) }
+    func testOneRoot8() { expectOneRoot(1, 3, 2.25, root_Expected: -1.5) }
+    func testOneRoot9() { expectOneRoot(4, 16, 16, root_Expected: -2) }
+    func testOneRoot10() { expectOneRoot(3.5, 98, 686, root_Expected: -14) }
     
     //MARK: - double roots: solution represented in the form x(x - P) or (x - P)(x - Q)
-    func test165() {
-        fillInForm(1, 6, 5)
-        
-        XCTAssertTrue(root1.exists)
-        XCTAssertTrue(root2.exists)
-        
-        //evaluate roots
-        let roots = evaluateRootLabels()
-        XCTAssertEqual(roots.count, 2)
-        XCTAssertEqual(roots[0], -1.0)
-        XCTAssertEqual(roots[1], -5.0)
-    }
-    
-    func test1812() {
-        fillInForm(1, 8, 12)
-        
-        XCTAssertTrue(root1.exists)
-        XCTAssertTrue(root2.exists)
-        
-        //evaluate roots
-        let roots = evaluateRootLabels()
-        XCTAssertEqual(roots.count, 2)
-        XCTAssertEqual(roots[0], -2.0)
-        XCTAssertEqual(roots[1], -6.0)
-    }
+    func testTwoRoots1() { expectTwoRoots(1, 6, 5, root1_Expected: -1, root2_Expected: -5) }
+    func testTwoRoots2() { expectTwoRoots(1, 8, 12, root1_Expected: -2, root2_Expected: -6) }
+    func testTwoRoots3() { expectTwoRoots(2, 0, -50, root1_Expected: 5, root2_Expected: -5) }
+    func testTwoRoots4() { expectTwoRoots(2, 7, 0, root1_Expected: 0, root2_Expected: -3.5) }
+    func testTwoRoots5() { expectTwoRoots(0.75, 11.25, 42, root1_Expected: -7, root2_Expected: -8) }
+    func testTwoRoots6() { expectTwoRoots(1, -2, 0, root1_Expected: 2, root2_Expected: 0) }
+    func testTwoRoots7() { expectTwoRoots(4, -7, 0, root1_Expected: 1.75, root2_Expected: 0) }
+    func testTwoRoots8() { expectTwoRoots(4, -7, 3, root1_Expected: 1, root2_Expected: 0.75) }
+    func testTwoRoots9() { expectTwoRoots(1, 0, -441, root1_Expected: 21, root2_Expected: -21) }
+    func testTwoRoots10() { expectTwoRoots(3.5, 0, -3.5, root1_Expected: 1, root2_Expected: -1)}
     
     //MARK: - any of P and Q are complex
     func testNoRoots1() { expectNoRoots(1, 0, 1) }
@@ -119,6 +90,11 @@ class Quadratic_SolverUITests: XCTestCase {
     func testNoRoots3() { expectNoRoots(-6, 3, -0.5) }
     func testNoRoots4() { expectNoRoots(1, -0.5, 0.5) }
     func testNoRoots5() { expectNoRoots(0.25, 1, 13) }
+    func testNoRoots6() { expectNoRoots(0.1, 1, 5) }
+    func testNoRoots7() { expectNoRoots(-3, 4, -15) }
+    func testNoRoots8() { expectNoRoots(15, 15, 16) }
+    func testNoRoots9() { expectNoRoots(Double(1/3), 1, 2) }
+    func testNoRoots10() { expectNoRoots(6, -1.55, 0.15) }
     
     
     //MARK: - Lower-level functionality and data extraction
@@ -186,7 +162,7 @@ class Quadratic_SolverUITests: XCTestCase {
         let roots = evaluateRootLabels()
         XCTAssertEqual(roots.count, 2)
         XCTAssertEqual(roots[0], root1_Expected)
-        XCTAssertEqual(roots[0], root2_Expected)
+        XCTAssertEqual(roots[1], root2_Expected)
     }
     
     func expectOneRoot(_ A: Double, _ B: Double, _ C: Double, root_Expected: Double) {
