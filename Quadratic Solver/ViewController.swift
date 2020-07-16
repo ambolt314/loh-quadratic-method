@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Numerics
 
 class ViewController: UIViewController {
     @IBOutlet weak var root1: UILabel!
@@ -75,7 +74,7 @@ class ViewController: UIViewController {
         
         print("Average = \(average)")
         
-        var u: Complex<Double> {
+        var u: Double {
             return (pow(average, 2) - C).squareRoot()
         }
         
@@ -87,18 +86,21 @@ class ViewController: UIViewController {
         print("Positive root = \(positiveRoot)")
         print("Negative root = \(negativeRoot)")
         
-        if positiveRoot == Double.nan || negativeRoot == Double.nan {
+        //No real roots
+        if positiveRoot.isNaN || negativeRoot.isNaN {
             root1.text = "No real roots"
             root1.isHidden = false
             root2.isHidden = true
         }
         
-        if positiveRoot != negativeRoot {
+        //Two real roots
+        else if positiveRoot != negativeRoot {
             root1.text = "x₁: \(positiveRoot)"
             root2.text = "x₂: \(negativeRoot)"
             root1.isHidden = false
             root2.isHidden = false
         }
+        //One real root
         else if positiveRoot == negativeRoot {
             root1.text = "x: \(positiveRoot)"
             root1.isHidden = false
