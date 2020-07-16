@@ -84,7 +84,7 @@ class Quadratic_SolverUITests: XCTestCase {
     func testTwoRoots9() { expectTwoRoots(1, 0, -441, root1_Expected: 21, root2_Expected: -21) }
     func testTwoRoots10() { expectTwoRoots(3.5, 0, -3.5, root1_Expected: 1, root2_Expected: -1)}
     
-    //MARK: - any of P and Q are complex
+    //MARK: - P and Q are complex
     func testNoRoots1() { expectNoRoots(1, 0, 1) }
     func testNoRoots2() { expectNoRoots(-1, 2, -3) }
     func testNoRoots3() { expectNoRoots(-6, 3, -0.5) }
@@ -96,8 +96,30 @@ class Quadratic_SolverUITests: XCTestCase {
     func testNoRoots9() { expectNoRoots(Double(1/3), 1, 2) }
     func testNoRoots10() { expectNoRoots(6, -1.55, 0.15) }
     
+    //MARK: - edge cases
+    func testAllEmpty() { fillInFormText() }
+    func testAEmpty() { fillInFormText(BText: "-2", CText: "1") }
+    func testBEmpty() { fillInFormText(AText: "1", CText: "-1") }
+    func testCEmpty() { fillInFormText(AText: "1", BText: "5") }
+    func testAlphabet() { fillInFormText(AText: "a", BText: "b", CText: "c")}
+    func testAlphanumeric() { fillInFormText(AText: "1a", BText: "2", CText: "3")}
     
     //MARK: - Lower-level functionality and data extraction
+    func fillInFormText(AText: String = "", BText: String = "", CText: String = "") {
+        a.tap()
+        enterValue(AText)
+               
+        b.tap()
+        enterValue(BText)
+               
+        c.tap()
+        enterValue(CText)
+               
+        //find a coordinate on the screen and tap to clear keyboard
+        tap(x: 50, y: 50)
+        submit.tap()
+    }
+    
     func fillInForm(_ A: Double, _ B: Double, _ C: Double) {
         a.tap()
         enterValue("\(A)")

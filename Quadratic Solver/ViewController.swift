@@ -16,7 +16,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var c: UITextField!
 
     override func viewDidLoad() {
-        print("View did load reached")
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         root1.isHidden = true
@@ -49,9 +48,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func solve(_ sender: Any) {
-    
-        print("I'm in! This is b.text: \(String(describing: b.text))")
-        
+
         var A = Double(a.text ?? "1") ?? 1
         var B = Double(b.text ?? "0") ?? 0
         var C = Double(c.text ?? "0") ?? 0
@@ -60,54 +57,44 @@ class ViewController: UIViewController {
         print("B = \(B)")
         print("C = \(C)")
         
-        if(A != 1) {
-            B = B/A
-            C = C/A
-            A = 1
-            print("#########################")
-            print("A = \(A)")
-            print("B = \(B)")
-            print("C = \(C)")
-        }
-        
-        let average = B == 0 ? 0 : -B / 2
-        
-        print("Average = \(average)")
-        
-        var u: Double {
-            return (pow(average, 2) - C).squareRoot()
-        }
-        
-        print("u = \(u)")
-        
-        let positiveRoot = average + u
-        let negativeRoot = average - u
-        
-        print("Positive root = \(positiveRoot)")
-        print("Negative root = \(negativeRoot)")
-        
-        //No real roots
-        if positiveRoot.isNaN || negativeRoot.isNaN {
-            root1.text = "No real roots"
+        if(A == 0) {
+            root1.text = "a cannot be zero"
             root1.isHidden = false
             root2.isHidden = true
         }
         
-        //Two real roots
-        else if positiveRoot != negativeRoot {
-            root1.text = "x₁: \(positiveRoot)"
-            root2.text = "x₂: \(negativeRoot)"
-            root1.isHidden = false
-            root2.isHidden = false
+        else {
+            if(A != 1) { B = B/A; C = C/A; A = 1 }
+            
+            let average = B == 0 ? 0 : -B / 2
+            
+            var u: Double {
+                return (pow(average, 2) - C).squareRoot()
+            }
+            
+            let positiveRoot = average + u
+            let negativeRoot = average - u
+            
+            //No real roots
+            if positiveRoot.isNaN || negativeRoot.isNaN {
+                root1.text = "No real roots"
+                root1.isHidden = false
+                root2.isHidden = true
+            }
+            
+            //Two real roots
+            else if positiveRoot != negativeRoot {
+                root1.text = "x₁: \(positiveRoot)"
+                root2.text = "x₂: \(negativeRoot)"
+                root1.isHidden = false
+                root2.isHidden = false
+            }
+            //One real root
+            else if positiveRoot == negativeRoot {
+                root1.text = "x: \(positiveRoot)"
+                root1.isHidden = false
+                root2.isHidden = true
+            }
         }
-        //One real root
-        else if positiveRoot == negativeRoot {
-            root1.text = "x: \(positiveRoot)"
-            root1.isHidden = false
-            root2.isHidden = true
-        }
-        
     }
-    
 }
-
