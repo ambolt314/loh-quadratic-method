@@ -170,24 +170,10 @@ class Quadratic_SolverUITests: XCTestCase {
         XCTAssertEqual(roots[1], -2)
         
     }
-    func testAZero() {
-        fillInForm(0, 1, 1)
-        XCTAssertTrue(root1.exists)
-        XCTAssertFalse(root2.exists)
-        XCTAssertEqual(root1.label, "a cannot be zero")
-    }
-    func testCNonZero() {
-        fillInForm(0, 0, 1)
-        XCTAssertTrue(root1.exists)
-        XCTAssertFalse(root2.exists)
-        XCTAssertEqual(root1.label, "a cannot be zero")
-    }
-    func testAllZero() {
-        fillInForm(0, 0, 0)
-        XCTAssertTrue(root1.exists)
-        XCTAssertFalse(root2.exists)
-        XCTAssertEqual(root1.label, "a cannot be zero")
-    }
+    func testAZero() { expectNoRoots(0, 1, 1) }
+    func testCNonZero() { expectNoRoots(0, 0, 1) }
+    func testAllZero() { expectNoRoots(0, 0, 0) }
+    
     
     //MARK: - Lower-level functionality and data extraction
     func fillInFormText(AText: String = "", BText: String = "", CText: String = "") {
@@ -278,9 +264,16 @@ class Quadratic_SolverUITests: XCTestCase {
         XCTAssertTrue(root1.exists)
         XCTAssertFalse(root2.exists)
         
-        //evaluate root
-        let roots = evaluateRootLabels()
-        XCTAssertEqual(roots.count, 0)
-        XCTAssertEqual(root1.label, "No real roots")
+        if A != 0 {
+            //evaluate root
+            let roots = evaluateRootLabels()
+            XCTAssertEqual(roots.count, 0)
+            XCTAssertEqual(root1.label, "No real roots")
+        }
+        else {
+            XCTAssertEqual(root1.label, "a cannot be zero")
+        }
+        
+        
     }
 }
