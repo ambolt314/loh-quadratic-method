@@ -42,7 +42,11 @@ class ViewController: UIViewController {
     @IBAction func helpMe(_ sender: Any) {
         let alertController =
             UIAlertController(title: "About this method",
-        message: "A new alternate method proposed by Po-Shen Loh from Carnegie Mellon university. It calculates the average of the two roots from the sum of b. More detail here: https://www.poshenloh.com/quadraticdetail/", preferredStyle: .alert)
+        message: """
+A new alternate method proposed by Po-Shen Loh from Carnegie Mellon university.
+It calculates the average of the two roots from the sum of b.
+More detail here: https://www.poshenloh.com/quadraticdetail/
+""", preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Got it, thanks!", style: .default))
         self.present(alertController, animated: true, completion: nil)
     }

@@ -93,47 +93,119 @@ class Quadratic_SolverUITests: XCTestCase {
     func testNoRoots6() { expectNoRoots(0.1, 1, 5) }
     func testNoRoots7() { expectNoRoots(-3, 4, -15) }
     func testNoRoots8() { expectNoRoots(15, 15, 16) }
-    func testNoRoots9() { expectNoRoots(Double(1/3), 1, 2) }
+    func testNoRoots9() { expectNoRoots(2, 1, 2) }
     func testNoRoots10() { expectNoRoots(6, -1.55, 0.15) }
     
     //MARK: - edge cases
-    func testAllEmpty() { fillInFormText() }
-    func testAEmpty() { fillInFormText(BText: "-2", CText: "1") }
-    func testBEmpty() { fillInFormText(AText: "1", CText: "-1") }
-    func testCEmpty() { fillInFormText(AText: "1", BText: "5") }
-    func testAlphabet() { fillInFormText(AText: "a", BText: "b", CText: "c")}
-    func testAlphanumeric() { fillInFormText(AText: "1a", BText: "2", CText: "3")}
+    func testAllEmpty() {
+        ///Default: x² = 0
+        submit.tap()
+        XCTAssertTrue(root1.exists)
+        XCTAssertFalse(root2.exists)
+        let roots = evaluateRootLabels()
+        XCTAssertEqual(roots.count, 1)
+        XCTAssertEqual(roots[0], 0)
+    }
+    func testAEmpty() {
+        fillInFormText(BText: "-2", CText: "1")
+        tap(x: 50, y: 50)
+        submit.tap()
+        XCTAssertTrue(root1.exists)
+        XCTAssertFalse(root2.exists)
+        let roots = evaluateRootLabels()
+        XCTAssertEqual(roots.count, 1)
+        XCTAssertEqual(roots[0], 1)
+    }
+    func testBEmpty() {
+        fillInFormText(AText: "1", CText: "-1")
+        tap(x: 50, y: 50)
+        submit.tap()
+        XCTAssertTrue(root1.exists)
+        XCTAssertTrue(root2.exists)
+        let roots = evaluateRootLabels()
+        XCTAssertEqual(roots.count, 2)
+        XCTAssertEqual(roots[0], 1)
+        XCTAssertEqual(roots[1], -1)
+    }
+    func testCEmpty() {
+        fillInFormText(AText: "1", BText: "5")
+        tap(x: 50, y: 50)
+        submit.tap()
+        XCTAssertTrue(root1.exists)
+        XCTAssertFalse(root2.exists)
+        let roots = evaluateRootLabels()
+        XCTAssertEqual(roots.count, 0)
+        XCTAssertEqual(root1.label, "no real roots")
+    }
+    func testSymbolA() {
+        fillInFormText(AText: ":", BText: "-2", CText: "1")
+        tap(x: 50, y: 50)
+        submit.tap()
+        XCTAssertTrue(root1.exists)
+        XCTAssertFalse(root2.exists)
+        let roots = evaluateRootLabels()
+        XCTAssertEqual(roots.count, 1)
+        XCTAssertEqual(roots[0], 1)
+    }
+    func testSymbolB() {
+        fillInFormText(AText: "2", BText: "(", CText: "-8")
+        tap(x: 50, y: 50)
+        submit.tap()
+        XCTAssertTrue(root1.exists)
+        XCTAssertTrue(root2.exists)
+        let roots = evaluateRootLabels()
+        XCTAssertEqual(roots.count, 2)
+        XCTAssertEqual(roots[0], 2)
+        XCTAssertEqual(roots[1], -2)
+    }
+    func testSymbolC() {
+        fillInFormText(AText: "1", BText: "2", CText: ".")
+        tap(x: 50, y: 50)
+        submit.tap()
+        XCTAssertTrue(root1.exists)
+        XCTAssertTrue(root2.exists)
+        let roots = evaluateRootLabels()
+        XCTAssertEqual(roots.count, 2)
+        XCTAssertEqual(roots[0], 0)
+        XCTAssertEqual(roots[1], -2)
+        
+    }
+    func testAZero() {
+        fillInForm(0, 1, 1)
+        XCTAssertTrue(root1.exists)
+        XCTAssertFalse(root2.exists)
+        XCTAssertEqual(root1.label, "a cannot be zero")
+    }
+    func testCNonZero() {
+        fillInForm(0, 0, 1)
+        XCTAssertTrue(root1.exists)
+        XCTAssertFalse(root2.exists)
+        XCTAssertEqual(root1.label, "a cannot be zero")
+    }
+    func testAllZero() {
+        fillInForm(0, 0, 0)
+        XCTAssertTrue(root1.exists)
+        XCTAssertFalse(root2.exists)
+        XCTAssertEqual(root1.label, "a cannot be zero")
+    }
     
     //MARK: - Lower-level functionality and data extraction
     func fillInFormText(AText: String = "", BText: String = "", CText: String = "") {
-        a.tap()
-        enterValue(AText)
-               
-        b.tap()
-        enterValue(BText)
-               
-        c.tap()
-        enterValue(CText)
-               
-        //find a coordinate on the screen and tap to clear keyboard
+        a.tap(); enterValue(AText)
+        b.tap(); enterValue(BText)
+        c.tap(); enterValue(CText)
         tap(x: 50, y: 50)
         submit.tap()
     }
     
     func fillInForm(_ A: Double, _ B: Double, _ C: Double) {
-        a.tap()
-        enterValue("\(A)")
-        
-        b.tap()
-        enterValue("\(B)")
-        
-        c.tap()
-        enterValue("\(C)")
+        a.tap(); enterValue("\(A)")
+        b.tap(); enterValue("\(B)")
+        c.tap(); enterValue("\(C)")
         
         //find a coordinate on the screen and tap to clear keyboard
         tap(x: 50, y: 50)
         submit.tap()
-        
     }
     
     ///Types a given string into a keyboard. The field is defined above the method call
