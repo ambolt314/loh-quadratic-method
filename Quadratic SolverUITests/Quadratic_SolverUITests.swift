@@ -114,19 +114,14 @@ class Quadratic_SolverUITests: XCTestCase {
     }
     
     //MARK: - any of P and Q are complex
-    func test101() {
-        fillInForm(1, 0, 1)
-        
-        XCTAssertTrue(root1.exists)
-        XCTAssertFalse(root2.exists)
-        
-        //evaluate root
-        let roots = evaluateRootLabels()
-        XCTAssertEqual(roots.count, 0)
-        XCTAssertEqual(root1.label, "No real roots")
-        
-    }
+    func testNoRoots1() { expectNoRoots(1, 0, 1) }
+    func testNoRoots2() { expectNoRoots(-1, 2, -3) }
+    func testNoRoots3() { expectNoRoots(-6, 3, -0.5) }
+    func testNoRoots4() { expectNoRoots(1, -0.5, 0.5) }
+    func testNoRoots5() { expectNoRoots(0.25, 1, 13) }
     
+    
+    //MARK: - Lower-level functionality and data extraction
     func fillInForm(_ A: Double, _ B: Double, _ C: Double) {
         a.tap()
         enterValue("\(A)")
@@ -179,5 +174,43 @@ class Quadratic_SolverUITests: XCTestCase {
             r1String = String(root1.label[index...])
             return [Double(Float(r1String) ?? 0)]
         }
+    }
+    
+    func expectTwoRoots(_ A: Double, _ B: Double, _ C: Double, root1_Expected: Double, root2_Expected: Double) {
+        fillInForm(A, B, C)
+        
+        XCTAssertTrue(root1.exists)
+        XCTAssertTrue(root2.exists)
+        
+        //evaluate root
+        let roots = evaluateRootLabels()
+        XCTAssertEqual(roots.count, 2)
+        XCTAssertEqual(roots[0], root1_Expected)
+        XCTAssertEqual(roots[0], root2_Expected)
+    }
+    
+    func expectOneRoot(_ A: Double, _ B: Double, _ C: Double, root_Expected: Double) {
+        fillInForm(A, B, C)
+         
+         //check that a single root is shown
+         XCTAssertTrue(root1.exists)
+         XCTAssertFalse(root2.exists)
+         
+         //evaluate root
+         let roots = evaluateRootLabels()
+         XCTAssertEqual(roots.count, 1)
+         XCTAssertEqual(roots[0], root_Expected)
+    }
+    
+    func expectNoRoots(_ A: Double, _ B: Double, _ C: Double) {
+        fillInForm(A, B, C)
+        
+        XCTAssertTrue(root1.exists)
+        XCTAssertFalse(root2.exists)
+        
+        //evaluate root
+        let roots = evaluateRootLabels()
+        XCTAssertEqual(roots.count, 0)
+        XCTAssertEqual(root1.label, "No real roots")
     }
 }
