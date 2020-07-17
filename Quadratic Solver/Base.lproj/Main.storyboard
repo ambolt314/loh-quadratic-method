@@ -64,9 +64,9 @@
                                             <constraint firstAttribute="height" constant="77" id="8ej-nY-Unj"/>
                                             <constraint firstAttribute="width" constant="77" id="Uk6-gh-hvy"/>
                                         </constraints>
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <state key="normal" backgroundImage="questionmark.square" catalog="system">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="titleShadowColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="helpMe:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VHb-9S-jXZ"/>
