@@ -9,4 +9,5 @@
 import XCTest
 @testable import Quadratic_Solver
 
+///All testing is implemented in UI tests, rather than Unit tests
 class Quadratic_SolverTests: XCTestCase {}

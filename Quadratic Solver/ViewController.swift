@@ -45,10 +45,18 @@ class ViewController: UIViewController {
         message: """
 A new alternate method proposed by Po-Shen Loh from Carnegie Mellon university.
 It calculates the average of the two roots from the sum of b.
-More detail here: https://www.poshenloh.com/quadraticdetail/
 """, preferredStyle: .alert)
+        
+        ///Website: https://www.poshenloh.com/quadraticdetail/
+        alertController.addAction(UIAlertAction(title: "Learn more", style: .default, handler: visitWebsite))
         alertController.addAction(UIAlertAction(title: "Got it, thanks!", style: .default))
         self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func visitWebsite(action: UIAlertAction) {
+        if let url = URL(string: "https://www.poshenloh.com/quadraticdetail/") {
+            UIApplication.shared.open(url)
+        }
     }
     
     @IBAction func solve(_ sender: Any) {

@@ -42,7 +42,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XOE-kj-WXA" userLabel="Button Stack View">
-                                <rect key="frame" x="168.5" y="549" width="77" height="59.5"/>
+                                <rect key="frame" x="168.5" y="549" width="77" height="116"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3UU-PJ-cJX">
                                         <rect key="frame" x="0.0" y="0.0" width="77" height="39"/>
@@ -58,8 +58,12 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Phf-Ij-RHK" userLabel="About">
-                                        <rect key="frame" x="0.0" y="40" width="77" height="18"/>
+                                        <rect key="frame" x="0.0" y="40" width="77" height="74.5"/>
                                         <accessibility key="accessibilityConfiguration" identifier="about"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="77" id="8ej-nY-Unj"/>
+                                            <constraint firstAttribute="width" constant="77" id="Uk6-gh-hvy"/>
+                                        </constraints>
                                         <state key="normal" backgroundImage="questionmark.square" catalog="system">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>

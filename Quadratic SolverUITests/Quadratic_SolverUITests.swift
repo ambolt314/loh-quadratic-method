@@ -173,6 +173,17 @@ class Quadratic_SolverUITests: XCTestCase {
     func testAZero() { expectNoRoots(0, 1, 1) }
     func testCNonZero() { expectNoRoots(0, 0, 1) }
     func testAllZero() { expectNoRoots(0, 0, 0) }
+    func testAboutVisitSite() {
+        about.tap()
+        app?.alerts["About this method"].scrollViews.otherElements.buttons["Learn more"].tap()
+        website(exists: true)
+    }
+    
+    func testAboutDismiss() {
+        about.tap()
+        app?.alerts["About this method"].scrollViews.otherElements.buttons["Got it, thanks!"].tap()
+        website(exists: false)
+    }
     
     
     //MARK: - Lower-level functionality and data extraction
@@ -209,6 +220,18 @@ class Quadratic_SolverUITests: XCTestCase {
         coordinate?.tap()
     }
     
+    func website(exists: Bool) {
+        //add a delay so that redirection can occur
+        let extURL = app?.otherElements["URL"]
+        if extURL?.exists ?? false {
+            XCTAssertEqual(extURL?.label, "https://www.poshenloh.com/quadraticdetail/")
+        }
+        
+        XCTAssertEqual(extURL?.exists, exists)
+    }
+    
+    
+    //MARK: - Root methods
     //Extracts the numerical values from the labels of each root
     func evaluateRootLabels() -> [Double] {
         
